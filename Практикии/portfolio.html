@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио — WebSpace</title>
+    <meta name="description" content="Примеры наших работ: сайты для бизнеса, интернет-магазины, корпоративные порталы. Реальные кейсы и результаты.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pr2.css">
+    
+    <style>
+        /* Дополнительные стили для портфолио */
+        .portfolio-page {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background: #f8fafc;
+        }
+        
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .portfolio-header h1 {
+            font-size: 48px;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-header p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Фильтры */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #64748b;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        /* Сетка портфолио */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        /* Карточка проекта */
+        .portfolio-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .portfolio-content {
+            padding: 25px;
+        }
+        
+        .portfolio-category {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #eef2ff;
+            color: #2563eb;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .portfolio-title {
+            font-size: 20px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-desc {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .portfolio-link:hover {
+            gap: 8px;
+        }
+        
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-page {
+                padding-top: 100px;
+            }
+            .portfolio-header h1 {
+                font-size: 36px;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-image {
+                height: 220px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .portfolio-header h1 {
+                font-size: 28px;
+            }
+            .portfolio-filters {
+                gap: 10px;
+            }
+            .filter-btn {
+                padding: 6px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="pr2.html" class="logo">
+                <img src="img/Group 6.png" alt="WebSpace - логотип" width="150" height="40">
+            </a>
+            
+            <button class="burger-menu" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="pr2.html#services">Услуги</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Портфолио</a></li>
+                <li><a href="pr2.html#about">О нас</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="pr2.html#footer">Контакты</a></li>
+            </ul>
+
+            <div class="nav-contacts" id="navContacts">
+                <a href="tel:+74951234567" class="phone">
+                    <img src="img/Ellipse 1.png" alt="Телефон" width="16" height="16">
+                    <span>+7 (495) 123-45-67</span>
+                </a>
+            </div>
+
+            <button class="btn btn-primary nav-button" type="button">Заказать звонок</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="portfolio-page">
+            <div class="container">
+                <div class="portfolio-header">
+                    <h1>Наши <span class="accent">проекты</span></h1>
+                    <p>Реальные кейсы, которыми мы гордимся. Каждый проект — это результат командной работы и индивидуального подхода.</p>
+                </div>
+                
+                <!-- Фильтры -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Все проекты</button>
+                    <button class="filter-btn" data-filter="websites">Сайты</button>
+                    <button class="filter-btn" data-filter="ecommerce">Интернет-магазины</button>
+                    <button class="filter-btn" data-filter="corporate">Корпоративные</button>
+                </div>
+                
+                <!-- Сетка проектов -->
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Проект 1 -->
+                    <div class="portfolio-item" data-category="websites">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600" alt="Сайт стоматологии" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Сайт</span>
+                            <h3 class="portfolio-title">Стоматология «Dental Pro»</h3>
+                            <p class="portfolio-desc">Разработка сайта с онлайн-записью и интеграцией с CRM. Увеличение заявок на 65% за 3 месяца.</p>
+                            <a href="#" class="portfolio-link">Смотреть кейс →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Проект 2 -->
+                    <div class="portfolio-item" data-category="ecommerce">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600" alt="Интернет-магазин одежды" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Интернет-магазин</span>
+                            <h3 class="portfolio-title">Fashion Store</h3>
+                            <p class="portfolio-desc">Полноценный интернет-магазин с фильтрами, корзиной и интеграцией с платежными системами. Рост продаж +120%.</p>
+                            <a href="#" class="portfolio-link">Смотреть кейс →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Проект 3 -->
+                    <div class="portfolio-item" data-category="corporate">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" alt="Корпоративный сайт" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Корпоративный</span>
+                            <h3 class="portfolio-title">Строительная компания «Монолит»</h3>
+                            <p class="portfolio-desc">Разработка корпоративного сайта с портфолио объектов и личным кабинетом для партнеров.</p>
+                            <a href="#" class="portfolio-link">Смотреть кейс →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Проект 4 -->
+                    <div class="portfolio-item" data-category="websites">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600" alt="Сайт юридической компании" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Сайт</span>
+                            <h3 class="portfolio-title">Юридическая компания «Правовой центр»</h3>
+                            <p class="portfolio-desc">Информационный портал с каталогом услуг, калькулятором стоимости и формой заявки.</p>
+                            <a href="#" class="portfolio-link">Смотреть кейс →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Проект 5 -->
+                    <div class="portfolio-item" data-category="ecommerce">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Магазин электроники" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Интернет-магазин</span>
+                            <h3 class="portfolio-title">Техно-Маркет</h3>
+                            <p class="portfolio-desc">Интернет-магазин с интеграцией 1С, фильтрами по характеристикам и удобной системой оплаты.</p>
+                            <a href="#" class="portfolio-link">Смотреть кейс →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Проект 6 -->
+                    <div class="portfolio-item" data-category="corporate">
+                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600" alt="Сайт ресторана" class="portfolio-image">
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Корпоративный</span>
+                            <h3 class="portfolio-title">Ресторан «Гастрономия»</h3>
+                            <p class="portfolio-desc">Сайт с онлайн-бронированием столов, меню и интеграцией с системами доставки.</p>
+                            <a href="#" class="portfolio-link">Смотреть кейс →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer" id="footer">
+        <div class="footer-content container">
+            <div class="footer-column">
+                <a href="pr2.html" class="footer-logo">
+                    <img src="img/Group 6.png" alt="WebSpace" width="150" height="40">
+                </a>
+            </div>
+            
+            <div class="footer-columnn">
+                <h3 class="footer-title">Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="pr2.html#services">Разработка сайтов</a></li>
+                    <li><a href="pr2.html#services">Дизайн и UX/UI</a></li>
+                    <li><a href="pr2.html#services">Адаптация</a></li>
+                    <li><a href="pr2.html#services">Поддержка</a></li>
+                    <li><a href="pr2.html#services">SEO</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column2">
+                <h3 class="footer-title">Компания</h3>
+                <ul class="footer-links">
+                    <li><a href="pr2.html#about">О нас</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="pr2.html#footer">Контакты</a></li>
+                </ul>   
+            </div>
+            
+            <div class="footer-column3">
+                <h3 class="footer-title">Контакты</h3>
+                <address class="footer-contacts">
+                    <p>📍 Пермь, ул. Ленина, 10</p>
+                    <p>📞 <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                    <p>✉️ <a href="mailto:hello@webspace.ru">hello@webspace.ru</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-column4">
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><img src="img/Ellipse 8.png" alt="LinkedIn"></a>
+                    <a href="#" aria-label="Telegram"><img src="img/icons8-telegram-app-48.png" alt="Telegram"></a>
+                    <a href="#" aria-label="Behance"><img src="img/Ellipse 10.png" alt="Behance"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p class="copyright">© 2024 WebSpace. Все права защищены.</p>
+            <a href="#" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <script src="пр2.js"></script>
+    <script>
+        // Фильтры для портфолио
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Убираем активный класс у всех кнопок
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
