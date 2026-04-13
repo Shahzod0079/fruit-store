@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Определение корневого элемента task-list -->
+    <xsd:element name="task-list">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="task" type="TaskType" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Определение сложного типа TaskType -->
+    <xsd:complexType name="TaskType">
+        <xsd:sequence>
+            <xsd:element name="title" type="TitleType"/>
+            <xsd:element name="date" type="DateType"/>
+            <xsd:element name="time" type="TimeType"/>
+            <xsd:element name="description" type="DescriptionType"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="IdType" use="required"/>
+    </xsd:complexType>
+
+    <!-- Определение типа для id -->
+    <xsd:simpleType name="IdType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="100"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- Определение типа для title  -->
+    <xsd:simpleType name="TitleType">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="100"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- Определение типа для date  -->
+    <xsd:simpleType name="DateType">
+        <xsd:restriction base="xsd:date">
+            <xsd:pattern value="\d{4}-\d{2}-\d{2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- Определение типа для time  -->
+    <xsd:simpleType name="TimeType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([0-1][0-9]|2[0-3]):[0-5][0-9]"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- Определение типа для description  -->
+    <xsd:simpleType name="DescriptionType">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="10"/>
+            <xsd:maxLength value="500"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

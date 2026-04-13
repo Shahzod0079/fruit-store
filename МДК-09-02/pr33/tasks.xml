@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<country id="Russia">
+	<cities-list>
+		<city>
+			<title>Новосибирск</title>
+			<state>Siberia</state>
+			<universities-list>
+				<university id="2">
+					<title>Новосибирский Государственный Технический Университет</title>
+					<noprivate/>
+					<address URL="www.nstu.ru"/>
+					<description>очень хороший институт</description> 
+				</university>  
+				<university id="2">
+					<title>Новосибирский Государственный Университет</title>
+					<noprivate/>
+					<address URL="www.nsu.ru"/>
+					<description>тоже не плохой</description> 
+				</university>  
+			</universities-list>
+		</city>
+	</cities-list>
+</country>

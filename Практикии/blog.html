@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+     <meta name="description" content="Полезные статьи о создании сайтов, веб-дизайне, SEO-оптимизации и трендах в IT. Советы экспертов WebSpace для вашего бизнеса.">
+    <link rel="stylesheet" href="pr2.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<header class="header">
+    <nav class="nav container">
+        <a href="index.html" class="blog">
+            <img src="img/Group 6.png" alt="Логотип">
+        </a>
+    </nav>
+</header>
+<!-- Шапка -->
+<header class="header">
+    <nav class="nav container">
+        <a href="index.html" class="logo">
+            <img src="img/Group 6.png" alt="WebSpace - логотип" width="150" height="40">
+        </a>
+        
+        <button class="burger-menu" id="burgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="pr2.html#services" class="nav-link">Услуги</a></li>
+            <li><a href="index.html#portfolio" class="nav-link">Портфолио</a></li>
+            <li><a href="blog.html" class="nav-link">Блог</a></li>
+            <li><a href="pr2.html" class="nav-link">О нас</a></li>
+            <li><a href="#footer" class="nav-link">Контакты</a></li>
+        </ul>
+        
+        <div class="nav-contacts" id="navContacts">
+            <a href="tel:+74951234567" class="phone">
+                <span>+7 (495) 123-45-67</span>
+            </a>
+
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Поиск...">
+                <button class="search-btn">
+            <img src="img/icons8-search-50.png" alt="Поиск" width="18" height="18">
+        </button>
+            </div>
+        </div>
+
+        <button class="btn btn-primary nav-button" type="button">Заказать звонок</button>
+    </nav>
+</header>
+
+<main class="blog-page">
+
+    <section class="blog-header">
+        <h1>Блог о веб-разработке</h1>
+        <p>Делимся опытом, подходами и практическими советами по созданию и поддержке сайтов.</p>
+    </section>
+
+    <section class="blog-posts">
+
+        <!-- Пост 1 -->
+        <article class="blog-post">
+            <img src="img/Картинка 1.webp" alt="SEO оптимизация для сайта" class="post-image">
+
+            <div class="post-content">
+                <div class="post-meta">
+                    <span>15 февраля 2026</span>
+                    <span class="dot">•</span>
+                    <span>SEO</span>
+                </div>
+
+                <h2 class="post-title">
+                    SEO для начинающих: <span>как выйти в топ</span>
+                </h2>
+
+                <div class="post-excerpt">
+                    <p>
+                        Чтобы сайт находили в поиске, не нужен огромный бюджет. Достаточно сделать базовые вещи правильно и регулярно.
+                    </p>
+
+                    <h3>Три основных шага</h3>
+                    <ol>
+                        <li>Собрать ключевые слова — то, что вводят клиенты</li>
+                        <li>Написать полезные тексты под эти запросы</li>
+                        <li>Ускорить загрузку и сделать удобную мобильную версию</li>
+                    </ol>
+
+                    <p>
+                        Первые результаты обычно видны через 2–3 месяца. Главное — не останавливаться.
+                    </p>
+                </div>
+
+                <a href="#" class="read-more">Читать подробнее</a>
+            </div>
+        </article>
+
+        <!-- Пост 2 -->
+        <article class="blog-post">
+            <img src="img/Картинка 2.webp" alt="Тренды веб-дизайна" class="post-image">
+
+            <div class="post-content">
+                <div class="post-meta">
+                    <span>1 февраля 2026</span>
+                    <span class="dot">•</span>
+                    <span>Дизайн</span>
+                </div>
+
+                <h2 class="post-title">
+                    Тренды веб-дизайна <span>2026</span>
+                </h2>
+
+                <div class="post-excerpt">
+                    <p>
+                        Дизайн сайта — это не просто красивая картинка, а удобство для пользователя. Вот что работает сейчас.
+                    </p>
+
+                    <h3>Что актуально</h3>
+                    <ul>
+                        <li>Микроанимации — сайт становится живым</li>
+                        <li>Крупные шрифты — сразу видно главное</li>
+                        <li>Минимум цветов и чистый воздух</li>
+                    </ul>
+
+                    <p>
+                        Главное правило: дизайн не должен мешать, он должен помогать.
+                    </p>
+                </div>
+
+               <a href="#" class="read-more">Читать подробнее</a>
+            </div>
+        </article>
+
+        <!-- Пост 3  -->
+        <article class="blog-post">
+            <img src="img/Картинка 3.webp" alt="Техническая поддержка сайтов" class="post-image">
+
+            <div class="post-content">
+                <div class="post-meta">
+                    <span>10 февраля 2026</span>
+                    <span class="dot">•</span>
+                    <span>Поддержка</span>
+                </div>
+
+                <h2 class="post-title">
+                    Зачем сайту нужна <span>техническая поддержка</span>
+                </h2>
+
+                <div class="post-excerpt">
+                    <p>
+                        Сайт как машина — требует регулярного обслуживания, чтобы не сломаться в самый неподходящий момент.
+                    </p>
+
+                    <h3>Что входит в поддержку</h3>
+                    <ul>
+                        <li>Регулярные бэкапы на случай сбоя</li>
+                        <li>Обновление CMS и защита от взлома</li>
+                        <li>Добавление новых материалов</li>
+                    </ul>
+
+                    <p>
+                        Небольшие регулярные работы экономят время и нервы в будущем.
+                    </p>
+                </div>
+
+             <a href="#" class="read-more">Читать подробнее</a>
+            </div>
+        </article>
+
+    </section>
+
+</main>
+
+<!-- Подвал-->
+<footer class="footer" id="footer">
+    <div class="footer-content container">
+        <div class="footer-column">
+            <a href="index.html" class="footer-logo">
+                <img src="img/Group 6.png" alt="WebSpace" width="150" height="40">
+            </a>
+        </div>
+        
+        <div class="footer-columnn">
+            <h3 class="footer-title">Услуги</h3>
+            <ul class="footer-links">
+                <li><a href="#">Разработка сайтов</a></li>
+                <li><a href="#">Дизайн и UX/UI</a></li>
+                <li><a href="#">Адаптация</a></li>
+                <li><a href="#">Поддержка</a></li>
+                <li><a href="#">SEO</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column2">
+            <h3 class="footer-title">Компания</h3>
+            <ul class="footer-links">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="#footer">Контакты</a></li>
+            </ul>   
+        </div>
+        
+        <div class="footer-column3">
+            <h3 class="footer-title">Контакты</h3>
+            <address class="footer-contacts">
+                <p>Пермь, ул. Ленина, 10</p>
+                <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                <p><a href="mailto:hello@webspace.ru">hello@webspace.ru</a></p>
+            </address>
+        </div>
+        
+        <div class="footer-column4">
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><img src="img/Ellipse 8.png" alt="LinkedIn"></a>
+                <a href="#" aria-label="Telegram"><img src="img/Ellipse 9.png" alt="Telegram"></a>
+                <a href="#" aria-label="Behance"><img src="img/Ellipse 10.png" alt="Behance"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom container">
+        <p class="copyright">© 2023 WebSpace. Все права защищены.</p>
+        <a href="#" class="privacy-link">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+<script src="пр2.js"></script>
+</body>
+</html>

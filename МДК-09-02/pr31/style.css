@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background: linear-gradient(135deg, #6725B5, #A424FF);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(103, 37, 181, 0.2);
+}
+
+.header h1 {
+    font-size: 38px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Навигация */
+.nav-menu {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: #1A1A1A;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    background: #6725B5;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Посты - ГОРИЗОНТАЛЬНО (в ряд) */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.post-card {
+    background: white;
+    border-radius: 24px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(103, 37, 181, 0.15);
+    border-color: #A424FF;
+}
+
+.post-card h2 {
+    color: #1A1A1A;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.post-card .preview {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #6725B5, #A424FF);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #4A1A8A, #8B1AE0);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(103, 37, 181, 0.4);
+}
+
+.btn-danger {
+    background: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #218838, #1aa179);
+}
+
+/* Формы */
+.form-container {
+    width: 800px;
+    height: 470px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6725B5;
+}
+
+.form-group textarea {
+    height: 300px;
+    resize: vertical;
+}
+
+/* Таблица админки */
+.admin-table {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    background: #6725B5;
+    color: white;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.admin-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-table tr:hover {
+    background: #f5f0fc;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Одна запись */
+.single-post {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    margin: 40px 0;
+}
+
+.single-post h1 {
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+.single-post .content {
+    line-height: 1.8;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Уведомления */
+.alert {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Футер */
+.footer {
+    background: #1A1A1A;
+    color: #999;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    font-size: 14px;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-menu ul {
+        gap: 15px;
+    }
+    
+    .nav-menu a {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+    
+    .admin-table {
+        font-size: 14px;
+    }
+    
+    .actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

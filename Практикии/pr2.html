@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практики</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pr2.css">
+    <link rel="stylesheet" href="blog.css">
+
+</head>
+<body>
+<header class="header">
+    <nav class="nav container">
+        <a href="" class="logo">
+            <img src="img/Group 6.png" alt="Логотип" width="150" height="40">
+        </a>
+ 
+        <button class="burger-menu" id="burgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#services" class="nav-link">Услуги</a></li>
+            <li><a href="portfolio.html" class="nav-link">Портфолио</a></li>
+            <li><a href="#about" class="nav-link">О нас</a></li>
+           <li><a href="blog.html" class="nav-link">Блог</a></li>
+            <li><a href="#footer" class="nav-link">Контакты</a></li>
+        </ul>
+
+        <div class="nav-contacts" id="navContacts">
+            <a href="tel:+74951234567" class="phone">
+                <span>+7 (495) 123-45-67</span>
+            </a>
+
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Поиск...">
+                <button class="search-btn">
+            <img src="img/icons8-search-50.png" alt="Поиск" width="18" height="18">
+        </button>
+            </div>
+        </div>
+
+       <button class="btn btn-primary" onclick="showCallBack()">Заказать звонок</button>
+    </nav>
+</header>
+    <main class="main">
+
+<section class="hero">
+    <div class="hero-content container">
+        <div class="hero-text">
+            <h1 class="hero-title">Современные <span class="accent">решения</span> для вашего   бизнеса</h1>
+            <p class="hero-subtitle">Помогаем бизнесу создавать и развивать эффективное онлайн-присутствие с помощью современных веб-технологий.</p>
+            <div class="hero-buttons">
+               <a href="#quiz-section" class="btn btn-primary btn-large">Обсудить проект</a>
+               <a href="portfolio.html" class="btn btn-secondary btn-large">Смотреть кейсы</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">Наши услуги</h2>
+
+        <div class="services-grid">
+
+            <article class="service-card">
+                <div class="card-icon">
+                    <img src="img/Ellipse 2.png" alt="Разработка сайтов" width="48" height="48">
+                </div>
+                <h3 class="card-title">Разработка сайтов</h3>
+                <p class="card-text">Корпоративные сайты, лендинги и сложные веб-платформы под ключ для решения ваших бизнес-задач.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="card-icon">
+                    <img src="img/Ellipse 3.png" alt="Веб-дизайн" width="48" height="48">
+                </div>
+                <h3 class="card-title">Веб-дизайн и UX/UI</h3>
+                <p class="card-text">Интерфейсы, которые нравятся пользователям и решают бизнес-задачи: от концепции до готового макета.</p>
+            </article>
+            <article class="service-card">
+                <div class="card-icon">
+                    <img src="img/Ellipse 4.png" alt="Адаптация" width="48" height="48">
+                </div>
+                <h3 class="card-title">Адаптация и оптимизация</h3>
+                <p class="card-text">Быстро загружающиеся сайты, которые идеально выглядят на любом устройстве — от смартфона до компьютера.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="card-icon">
+                    <img src="img/Ellipse 5.png" alt="Поддержка" width="48" height="48">
+                </div>
+                <h3 class="card-title">Техническая поддержка</h3>
+                <p class="card-text">Оперативное решение вопросов, обновление контента и защита вашего сайта 24/7 после запуска.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="card-icon">
+                    <img src="img/Ellipse 6.png" alt="SEO" width="48" height="48">
+                </div>
+                <h3 class="card-title">SEO-оптимизация</h3>
+                <p class="card-text">Повышение видимости вашего сайта в поиске для привлечения целевых клиентов без увеличения рекламного бюджета.</p>
+            </article>
+  
+            <article class="service-card">
+                <div class="card-icon">
+                    <img src="img/Ellipse 7.png" alt="CRM" width="48" height="48">
+                </div>
+                <h3 class="card-title">Интеграция с CRM</h3>
+                <p class="card-text">Настройка автоматического переноса заявок с сайта в CRM, чтобы вы не упускали ни одного клиента.</p>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- Часть 1. Наша команда  -->
+<section class="team-section">
+    <div class="container">
+        <h2 class="section-title">Команда <span class="accent">экспертов</span></h2>
+        <p class="section-subtitle">Над вашими проектами работают профессионалы с многолетним опытом</p>
+        
+        <div class="team-grid">
+            <!-- Карточка 1 -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="img/Александр Петров.webp" alt="Александр Петров - руководитель отдела разработки">
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Александр Петров</h3>
+                    <p class="team-position">Руководитель, стаж 9 лет</p>
+                    <p class="team-expertise">Эксперт по высоконагруженным проектам и архитектуре веб-приложений. Реализовал более 50 успешных проектов для крупных заказчиков.</p>
+                    <div class="team-contact">
+                        <a href="mailto:a.petrov@webspace.ru" class="team-icon-link">
+                            <img src="img/иконка почта.png" alt="Email" class="team-icon">
+                            <span>a.petrov@webspace.ru</span>
+                        </a>
+                        <a href="https://t.me/webspace_alex" class="team-icon-link" target="_blank">
+                            <img src="img/иконка телефон.png" alt="Telegram" class="team-icon">
+                            <span>@webspace_alex</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Карточка 2 -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="img/Олеся Шевлягина.webp" alt="Екатерина Соколова - ведущий дизайнер UI/UX">
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Екатерина Соколова</h3>
+                    <p class="team-position">Ведущий дизайнер UI/UX, стаж 7 лет</p>
+                    <p class="team-expertise">Специалист по созданию удобных интерфейсов. Победитель конкурса Awwwards 2023. Разработала дизайн для 30+ успешных проектов.</p>
+                        <div class="team-contact">
+                        <a href="mailto:e.sokolova@webspace.ru" class="team-icon-link">
+                            <img src="img/иконка почта.png" alt="Email" class="team-icon">
+                            <span>e.sokolova@webspace.ru</span>
+                        </a>
+                        <a href="https://t.me/webspace_dima" class="team-icon-link" target="_blank">
+                            <img src="img/иконка телефон.png" alt="Telegram" class="team-icon">
+                            <span>@webspace_katya</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Карточка 3 -->
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="img/SEO специалист.webp" alt="Дмитрий Иванов - SEO-специалист">
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Дмитрий Иванов</h3>
+                    <p class="team-position">SEO-специалист, стаж 6 лет</p>
+                    <p class="team-expertise">Сертифицированный специалист по продвижению. Вывел в топ 15 сайтов в высококонкурентных нишах. Эксперт по поведенческим факторам.</p>
+                    <div class="team-contact">
+                        <a href="mailto:d.ivanov@webspace.ru" class="team-icon-link">
+                            <img src="img/иконка почта.png" alt="Email" class="team-icon">
+                            <span>d.ivanov@webspace.ru</span>
+                        </a>
+                        <a href="https://t.me/webspace_dima" class="team-icon-link" target="_blank">
+                            <img src="img/иконка телефон.png" alt="Telegram" class="team-icon">
+                            <span>@webspace_dima</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Часть 2. Отзывы клиентов -->
+<section class="reviews-section">
+    <div class="container">
+        <h2 class="section-title">Нас <span class="accent">рекомендуют</span></h2>
+        <p class="section-subtitle">Более 150 довольных клиентов за 5 лет работы</p>
+        
+        <div class="reviews-grid">
+            <!-- Отзыв 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h3 class="reviewer-name">ООО "ТехноСтрой"</h3>
+                        <p class="reviewer-position">Иван Морозов, директор</p>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Разработали для нас корпоративный сайт с личным кабинетом. Сделали все четко по срокам, учли все пожелания. Отдельное спасибо за поддержку после запуска — ребята всегда на связи и быстро решают вопросы.</p>
+                </div>
+                <div class="review-footer">
+                    <time datetime="2024-01-15">15 января 2026</time>
+                </div>
+            </div>
+            
+            <!-- Отзыв 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h3 class="reviewer-name">Студия красоты "Glamour"</h3>
+                        <p class="reviewer-position">Елена Волкова, владелец</p>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Заказывали разработку сайта с онлайн-записью. Дизайн получился стильным и современным, клиентам удобно записываться. Увеличили количество заявок на 40% за первые 2 месяца. Спасибо командам WebSpace</p>
+                </div>
+                <div class="review-footer">
+                    <time datetime="2024-02-03">3 февраля 2026</time>
+                </div>
+            </div>
+            
+            <!-- Отзыв 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h3 class="reviewer-name">ИП Смирнов А.В.</h3>
+                        <p class="reviewer-position">Алексей Смирнов</p>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p>Продвинули мой интернет-магазин в топ-10 по ключевым запросам. Трафик вырос в 3 раза, продажи увеличились. Ребята действительно разбираются в SEO и постоянно отслеживают изменения алгоритмов. Рекомендую!</p>
+                </div>
+                <div class="review-footer">
+                    <time datetime="2024-02-20">20 февраля 2026</time>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Часть 3. Омниканальность  -->
+<section class="connect-section">
+    <div class="container">
+        <div class="connect-widget">
+            <div class="connect-content">
+                <h3 class="connect-title">Свяжитесь с нами <span>в любом удобном канале</span></h3>
+                <p class="connect-text">Выберите способ связи — мы всегда на связи и готовы ответить на ваши вопросы</p>
+                
+                <div class="connect-channels">
+                    <div class="channel-group">
+                        <h4>Социальные сети</h4>
+                        <div class="channel-icons">
+                        <a href="https://vk.com/webspace" target="_blank">
+                            <img src="img/иконка ВК.png" alt="иконка вк">
+                        </a>
+                        <a href="https://instagram.com/webspace" target="_blank">
+                            <img src="img/логотип инстаграм.png" alt="иконка инстаграм">
+                        </a>
+                        <a href="https://t.me/webspace" target="_blank">
+                            <img src="img/icons8-telegram-app-48.png" alt="иконка телеграм">
+                        </a>
+                        </div>
+                    </div>
+                    
+                    <div class="channel-group">
+                        <div  class="group-icons" alt="иконки"></div>
+                        <h4>Телефон и почта</h4>
+                        <a href="mailto:hello@webspace.ru">
+                            <img src="img/icons8-почта-48.png" alt="иконка почта">
+                        </a>
+                        <a href="tel:+74951234567">
+                            <img src="img/icons8-телефон-48.png" alt="иконка телефон">
+                        </a>
+                    </div>
+                    
+                    <div class="channel-group">
+                        <h4>Мы на карте</h4>
+                        <div class="map-link">
+                            <img src="img/icons8-место-нахождения-94.png" alt="иконка карта" class="map-icon">
+                            <span>Пермь, ул. Ленина, 10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Часть 4. Интерактивная форма -->
+<section class="quiz-section" id="quiz-section">
+    <div class="container">
+        <div class="quiz-container">
+            <h2 class="quiz-title">Узнайте стоимость разработки за <span class="accent">2 минуты</span></h2>
+            <p class="quiz-subtitle">Ответьте на 4 вопроса и получите примерную стоимость и персональные рекомендации</p>
+            
+            <div class="quiz-widget" id="quizWidget">
+                <!-- Вопрос 1 -->
+                <div class="quiz-step active" data-step="1">
+                    <div class="quiz-question">
+                        <span class="question-counter">Вопрос 1 из 4</span>
+                        <h3>Какой тип сайта вам нужен?</h3>
+                    </div>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="landing">
+                            <span class="option-text">Лендинг (одностраничный сайт)</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="corporate">
+                            <span class="option-text">Корпоративный сайт</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="ecommerce">
+                            <span class="option-text">Интернет-магазин</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="portal">
+                            <span class="option-text">Портал / Сложная система</span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary quiz-next" disabled>Далее</button>
+                </div>
+                
+                <!-- Вопрос 2 -->
+                <div class="quiz-step" data-step="2">
+                    <div class="quiz-question">
+                        <span class="question-counter">Вопрос 2 из 4</span>
+                        <h3>Есть ли готовый дизайн-макет?</h3>
+                    </div>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="yes">
+                            <span class="option-text">Да, есть готовый макет</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="no-design">
+                            <span class="option-text">Нужна разработка дизайна</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="redesign">
+                            <span class="option-text">Нужен редизайн существующего</span>
+                        </label>
+                    </div>
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary quiz-prev">Назад</button>
+                        <button class="btn btn-primary quiz-next" disabled>Далее</button>
+                    </div>
+                </div>
+                
+                <!-- Вопрос 3 -->
+                <div class="quiz-step" data-step="3">
+                    <div class="quiz-question">
+                        <span class="question-counter">Вопрос 3 из 4</span>
+                        <h3>Какой функционал нужен?</h3>
+                    </div>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="basic">
+                            <span class="option-text">Базовый (новости, контакты, услуги)</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="catalog">
+                            <span class="option-text">Каталог с фильтрами</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="personal">
+                            <span class="option-text">Личный кабинет / интеграции</span>
+                        </label>
+                    </div>
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary quiz-prev">Назад</button>
+                        <button class="btn btn-primary quiz-next" disabled>Далее</button>
+                    </div>
+                </div>
+                
+                <!-- Вопрос 4 (контактные данные) -->
+                <div class="quiz-step" data-step="4" id="quiz-step">
+                    <div class="quiz-question">
+                        <span class="question-counter">Последний шаг</span>
+                        <h3>Оставьте контакты — получите расчет</h3>
+                    </div>
+                    <div class="quiz-form">
+                        <div class="form-group">
+                            <input type="text" name="quiz-name" placeholder="Ваше имя" required class="form-input" id="quiz-name">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="quiz-phone" placeholder="+7 (___) ___-__-__" required class="form-input" id="quiz-phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="quiz-email" placeholder="Email" class="form-input" id="quiz-email">
+                        </div>
+                        <div class="quiz-policy">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="policy" required>
+                                <span>Согласен на обработку данных</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz-buttons">
+                        <button class="btn btn-secondary quiz-prev">Назад</button>
+                        <button class="btn btn-primary quiz-submit" type="submit">Получить расчет</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Результат (скрыт) -->
+            <div class="quiz-result" style="display: none;">
+                <h3>Спасибо за ответы!</h3>
+                <p>Мы уже готовим расчет специально для вас. Наш менеджер свяжется в течение 30 минут.</p>
+                <a href="#quiz-step" class="btn btn-primary quiz-ok" style="margin-top: 20px;">Отлично</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2 class="cta-title">Готовы вывести ваш бизнес в онлайн?</h2>
+        <p class="cta-text">Оставьте заявку и получите бесплатную консультацию по вашему проекту в течение 30 минут.</p>
+<form class="cta-form" id="contact-form">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Ваше имя" required class="form-input">
+    </div>
+    <div class="form-group">
+        <input type="tel" name="phone" placeholder="Телефон, email" required class="form-input">
+    </div>
+    <button type="submit" class="btn btn-primary btn-large">Отправить</button>
+</form>
+        <p class="form-note">
+            <img src="img/Checkboxes.png" alt="галочка" class="checkbox-icon" width="18" height="18">
+            Подтверждаю <a href="privacy.html">согласие на обработку данных</a>.
+        </p>
+    </div>
+</section>
+    </main>
+<!-- Карта -->
+<!-- Карта с меткой -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title">Мы на <span class="accent">карте</span></h2>
+        <p class="section-subtitle">г. Пермь, ул. Ленина, 10</p>
+    </div>
+    <div class="map-container">
+       <iframe 
+            src="https://yandex.ru/map-widget/v1/?ll=56.257102%2C58.016248&z=16&pt=56.257102,58.016248,pm2rdl" 
+            width="100%" 
+            height="400" 
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+<footer class="footer" id="footer">
+    <div class="footer-content container">
+        <div class="footer-column">
+            <a href="Логотип" class="footer-logo">
+                <img src="img/Group 6.png" alt="WebSpace" width="150" height="40">
+            </a>
+        </div>
+        
+        <div class="footer-columnn">
+            <h3 class="footer-title">Услуги</h3>
+            <ul class="footer-links">
+                <li><a href="#">Разработка сайтов</a></li>
+                <li><a href="#">Дизайн и UX/UI</a></li>
+                <li><a href="#">Адаптация</a></li>
+                <li><a href="#">Поддержка</a></li>
+                <li><a href="#">SEO</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column2">
+            <h3 class="footer-title">Компания</h3>
+            <ul class="footer-links">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>   
+        </div>
+        
+        <div class="footer-column3">
+            <h3 class="footer-title">Контакты</h3>
+            <address class="footer-contacts">
+                <p>Пермь, ул. Ленина, 10</p>
+                <p><a href="Телефон">+7 (495) 123-45-67</a></p>
+                <p><a href="Почта">hello@webspace.ru</a></p>
+            </address>
+        </div>
+        
+        <div class="footer-column4">
+            <div class="social-links">
+            <a href="https://www.linkedin.com/company/webspace" target="_blank" aria-label="LinkedIn">
+                <img src="img/Ellipse 8.png" alt="LinkedIn">
+            </a>
+            <a href="https://t.me/webspace" target="_blank" aria-label="Telegram">
+                <img src="img/icons8-telegram-app-48.png" alt="Telegram">
+            </a>
+            <a href="https://www.behance.net/webspace" target="_blank" aria-label="Behance">
+                <img src="img/Ellipse 10.png" alt="Behance">
+            </a>
+            <a href="https://wa.me/74951234567" target="_blank" aria-label="WhatsApp">
+                <img src="img/Ellipse 11.png" alt="WhatsApp">
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom container">
+        <p class="copyright">© 2023 WebSpace. Все права защищены.</p>
+        <a href="privacy.html" class="privacy-link">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+    <script src="пр2.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании — WebSpace</title>
+    <meta name="description" content="WebSpace — команда профессионалов по разработке сайтов. Более 5 лет опыта, 150+ проектов, индивидуальный подход.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pr2.css">
+    
+    <style>
+        .about-page {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: #f8fafc;
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .about-header h1 {
+            font-size: 42px;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 16px;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2563eb;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+        
+        .about-text h2 {
+            font-size: 24px;
+            color: #1e293b;
+            margin: 30px 0 15px;
+        }
+        
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+        
+        .about-text ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        .about-text li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-page {
+                padding-top: 110px;
+            }
+            .about-container {
+                padding: 30px 20px;
+                margin: 0 15px;
+            }
+            .about-header h1 {
+                font-size: 32px;
+            }
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .stat-number {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .about-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="pr2.html" class="logo">
+                <img src="img/Group 6.png" alt="WebSpace - логотип" width="150" height="40">
+            </a>
+            
+            <button class="burger-menu" id="burgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="pr2.html#services">Услуги</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="pr2.html#footer">Контакты</a></li>
+            </ul>
+
+            <div class="nav-contacts" id="navContacts">
+                <a href="tel:+74951234567" class="phone">
+                    <img src="img/Ellipse 1.png" alt="Телефон" width="16" height="16">
+                    <span>+7 (495) 123-45-67</span>
+                </a>
+            </div>
+
+            <button class="btn btn-primary nav-button" type="button">Заказать звонок</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="about-page">
+            <div class="about-container">
+                <div class="about-header">
+                    <h1>О компании <span class="accent">WebSpace</span></h1>
+                    <p>Современные решения для вашего бизнеса</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">лет на рынке</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">успешных проектов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">довольных клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">поддержка</div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h2>Кто мы</h2>
+                    <p>WebSpace — это команда профессионалов, специализирующихся на создании сайтов и цифровых решений для бизнеса. Мы помогаем компаниям выстраивать эффективное онлайн-присутствие и увеличивать продажи через интернет.</p>
+                    
+                    <h2>Наша миссия</h2>
+                    <p>Сделать интернет-технологии доступными и понятными для каждого бизнеса. Мы создаем сайты, которые не просто красиво выглядят, но и реально работают на результат.</p>
+                    
+                    <h2>Наши ценности</h2>
+                    <ul>
+                        <li><strong>Индивидуальный подход</strong> — каждый проект уникален</li>
+                        <li><strong>Прозрачность</strong> — честные цены и понятные этапы работы</li>
+                        <li><strong>Результат</strong> — ориентируемся на KPI клиента</li>
+                        <li><strong>Поддержка</strong> — всегда на связи после запуска</li>
+                    </ul>
+                    
+                    <h2>Почему выбирают нас</h2>
+                    <p>За 5 лет работы мы реализовали более 150 проектов разной сложности: от сайтов-визиток до интернет-магазинов и корпоративных порталов. Наши клиенты — это компании из разных сфер: строительство, медицина, образование, retail и другие.</p>
+                    <p>Мы не просто делаем сайты — мы строим долгосрочные отношения с клиентами и помогаем их бизнесу расти.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer" id="footer">
+        <div class="footer-content container">
+            <div class="footer-column">
+                <a href="pr2.html" class="footer-logo">
+                    <img src="img/Group 6.png" alt="WebSpace" width="150" height="40">
+                </a>
+            </div>
+            
+            <div class="footer-columnn">
+                <h3 class="footer-title">Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="pr2.html#services">Разработка сайтов</a></li>
+                    <li><a href="pr2.html#services">Дизайн и UX/UI</a></li>
+                    <li><a href="pr2.html#services">Адаптация</a></li>
+                    <li><a href="pr2.html#services">Поддержка</a></li>
+                    <li><a href="pr2.html#services">SEO</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column2">
+                <h3 class="footer-title">Компания</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="pr2.html#footer">Контакты</a></li>
+                </ul>   
+            </div>
+            
+            <div class="footer-column3">
+                <h3 class="footer-title">Контакты</h3>
+                <address class="footer-contacts">
+                    <p>📍 Пермь, ул. Ленина, 10</p>
+                    <p>📞 <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                    <p>✉️ <a href="mailto:hello@webspace.ru">hello@webspace.ru</a></p>
+                </address>
+            </div>
+            
+            <div class="footer-column4">
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><img src="img/Ellipse 8.png" alt="LinkedIn"></a>
+                    <a href="#" aria-label="Telegram"><img src="img/icons8-telegram-app-48.png" alt="Telegram"></a>
+                    <a href="#" aria-label="Behance"><img src="img/Ellipse 10.png" alt="Behance"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p class="copyright">© 2024 WebSpace. Все права защищены.</p>
+            <a href="privacy.html" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <script src="пр2.js"></script>
+</body>
+</html>
